@@ -91,9 +91,17 @@ against the exact optimum; large ones against the 2-approximation's lower bound
 
 What it shows, on an M4 Max:
 
-- **On average, Greedy is as good or better.** On random strings and genome
-  reads it is optimal on 85-100% of small instances; the 2-approximation is
-  within a few percent, and slower by about ten times on small inputs.
+- **On average, Greedy is usually better.** Its mean ratio is better in seven
+  of the eight families, and on genome reads it is optimal on 98% of small
+  instances against 74%. Two exceptions: on 200 random 4-letter strings the
+  2-approximation wrote exactly *W* letters every time (provably optimal) while
+  Greedy was 0.02% longer, and on small 4-letter instances it found the
+  optimum more often (91% against 85%) despite a slightly worse mean.
+- **It is not faster.** It is about ten times slower on small inputs and over a
+  hundred times slower on 60 periodic strings. It wins on 1,000 genome reads
+  (86 against 271 ms) only because `greedy` here computes all pairwise
+  overlaps; a suffix-tree Greedy runs in near-linear time, while the
+  2-approximation's graph grows with the square of the input length.
 - **The guarantee is the difference.** On `{c(ab)^k, (ba)^k, (ab)^k c}` Greedy,
   MGREEDY and TGREEDY write *4k + 2* letters against an optimum of *2k + 4*; the
   2-approximation writes *2k + 6*.
