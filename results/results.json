@@ -1,0 +1,378 @@
+{
+  "env": {
+    "date": "2026-10-07",
+    "cpu": "Apple M4 Max",
+    "cores": 16,
+    "platform": "darwin 27.0.0",
+    "node": "v26.8.2"
+  },
+  "quick": false,
+  "small": [
+    {
+      "family": "random, 4 letters",
+      "instances": 300,
+      "lowerBoundOverOpt": {
+        "mean": 0.9949390644858912,
+        "worst": 0.9047619047619048
+      },
+      "results": {
+        "naive": {
+          "mean": 1.1873090656563203,
+          "worst": 1.435897435897436,
+          "optimal": 0.02666666666666667,
+          "medianMs": 0.004708
+        },
+        "greedy": {
+          "mean": 1.0049985699005228,
+          "worst": 1.0909090909090908,
+          "optimal": 0.8466666666666667,
+          "medianMs": 0.0140625
+        },
+        "mgreedy": {
+          "mean": 1.03009747315695,
+          "worst": 1.2,
+          "optimal": 0.41,
+          "medianMs": 0.0133955
+        },
+        "tgreedy": {
+          "mean": 1.009379545677799,
+          "worst": 1.15,
+          "optimal": 0.7433333333333333,
+          "medianMs": 0.0148335
+        },
+        "twoApprox": {
+          "mean": 1.0075462206274375,
+          "worst": 1.3333333333333333,
+          "optimal": 0.9066666666666666,
+          "medianMs": 0.152396
+        }
+      }
+    },
+    {
+      "family": "random, 26 letters",
+      "instances": 300,
+      "lowerBoundOverOpt": {
+        "mean": 0.9996303637181101,
+        "worst": 0.96875
+      },
+      "results": {
+        "naive": {
+          "mean": 1.0302606632794826,
+          "worst": 1.1333333333333333,
+          "optimal": 0.33,
+          "medianMs": 0.00375
+        },
+        "greedy": {
+          "mean": 1,
+          "worst": 1,
+          "optimal": 1,
+          "medianMs": 0.012021
+        },
+        "mgreedy": {
+          "mean": 1.000668270525861,
+          "worst": 1.0256410256410255,
+          "optimal": 0.9666666666666667,
+          "medianMs": 0.0111045
+        },
+        "tgreedy": {
+          "mean": 1.0002771784577593,
+          "worst": 1.0256410256410255,
+          "optimal": 0.9866666666666667,
+          "medianMs": 0.015020499999999999
+        },
+        "twoApprox": {
+          "mean": 1.0007002253356934,
+          "worst": 1.0952380952380953,
+          "optimal": 0.9866666666666667,
+          "medianMs": 0.160542
+        }
+      }
+    },
+    {
+      "family": "genome reads",
+      "instances": 300,
+      "lowerBoundOverOpt": {
+        "mean": 0.9875711979771679,
+        "worst": 0.6666666666666666
+      },
+      "results": {
+        "naive": {
+          "mean": 1.8547293751829435,
+          "worst": 3.085714285714286,
+          "optimal": 0,
+          "medianMs": 0.004917
+        },
+        "greedy": {
+          "mean": 1.0004673107725475,
+          "worst": 1.0392156862745099,
+          "optimal": 0.9833333333333333,
+          "medianMs": 0.016333
+        },
+        "mgreedy": {
+          "mean": 1.0076950259712805,
+          "worst": 1.1063829787234043,
+          "optimal": 0.77,
+          "medianMs": 0.015333
+        },
+        "tgreedy": {
+          "mean": 1.0013733905043523,
+          "worst": 1.0851063829787233,
+          "optimal": 0.9633333333333334,
+          "medianMs": 0.0151045
+        },
+        "twoApprox": {
+          "mean": 1.0342800091546491,
+          "worst": 1.36,
+          "optimal": 0.74,
+          "medianMs": 0.19424999999999998
+        }
+      }
+    },
+    {
+      "family": "periodic",
+      "instances": 300,
+      "lowerBoundOverOpt": {
+        "mean": 0.9698602628360035,
+        "worst": 0.7
+      },
+      "results": {
+        "naive": {
+          "mean": 1.4808199267024966,
+          "worst": 3.6176470588235294,
+          "optimal": 0.11333333333333333,
+          "medianMs": 0.004833
+        },
+        "greedy": {
+          "mean": 1.0072762486700804,
+          "worst": 1.5588235294117647,
+          "optimal": 0.8966666666666666,
+          "medianMs": 0.0085625
+        },
+        "mgreedy": {
+          "mean": 1.2008461118415992,
+          "worst": 1.76,
+          "optimal": 0.2633333333333333,
+          "medianMs": 0.007729
+        },
+        "tgreedy": {
+          "mean": 1.0341822245102439,
+          "worst": 1.5625,
+          "optimal": 0.7766666666666666,
+          "medianMs": 0.009062500000000001
+        },
+        "twoApprox": {
+          "mean": 1.0541958163885907,
+          "worst": 1.6756756756756757,
+          "optimal": 0.67,
+          "medianMs": 1.254292
+        }
+      }
+    }
+  ],
+  "trap": [
+    {
+      "k": 2,
+      "opt": 8,
+      "naive": 14,
+      "greedy": 10,
+      "mgreedy": 10,
+      "tgreedy": 10,
+      "twoApprox": 10
+    },
+    {
+      "k": 4,
+      "opt": 12,
+      "naive": 26,
+      "greedy": 18,
+      "mgreedy": 18,
+      "tgreedy": 18,
+      "twoApprox": 14
+    },
+    {
+      "k": 8,
+      "opt": 20,
+      "naive": 50,
+      "greedy": 34,
+      "mgreedy": 34,
+      "tgreedy": 34,
+      "twoApprox": 22
+    },
+    {
+      "k": 16,
+      "opt": 36,
+      "naive": 98,
+      "greedy": 66,
+      "mgreedy": 66,
+      "tgreedy": 66,
+      "twoApprox": 38
+    },
+    {
+      "k": 32,
+      "opt": 68,
+      "naive": 194,
+      "greedy": 130,
+      "mgreedy": 130,
+      "tgreedy": 130,
+      "twoApprox": 70
+    },
+    {
+      "k": 64,
+      "opt": 132,
+      "naive": 386,
+      "greedy": 258,
+      "mgreedy": 258,
+      "tgreedy": 258,
+      "twoApprox": 134
+    }
+  ],
+  "large": [
+    {
+      "family": "random, 4 letters, n=200",
+      "instances": 20,
+      "fallbacks": 0,
+      "results": {
+        "naive": {
+          "mean": 1.3238370531132861,
+          "worst": 1.3399708596406021,
+          "optimal": 0,
+          "medianMs": 0.570479
+        },
+        "greedy": {
+          "mean": 1.0002406104751813,
+          "worst": 1.0014612761811983,
+          "optimal": 0.7,
+          "medianMs": 10.820125
+        },
+        "mgreedy": {
+          "mean": 1.0041322331100158,
+          "worst": 1.0108133521391631,
+          "optimal": 0.05,
+          "medianMs": 10.7710835
+        },
+        "tgreedy": {
+          "mean": 1.0018059285057326,
+          "worst": 1.0048995590396865,
+          "optimal": 0.15,
+          "medianMs": 10.8417915
+        },
+        "twoApprox": {
+          "mean": 1,
+          "worst": 1,
+          "optimal": 1,
+          "medianMs": 22.1700625
+        }
+      }
+    },
+    {
+      "family": "genome reads, n=300, 1,000 bp",
+      "instances": 20,
+      "fallbacks": 0,
+      "results": {
+        "naive": {
+          "mean": 7.802229570436024,
+          "worst": 8.030303030303031,
+          "optimal": 0,
+          "medianMs": 0.4189585
+        },
+        "greedy": {
+          "mean": 1.0003525252253371,
+          "worst": 1.0010172939979654,
+          "optimal": 0.65,
+          "medianMs": 25.212833
+        },
+        "mgreedy": {
+          "mean": 1.0003525252253371,
+          "worst": 1.0010172939979654,
+          "optimal": 0.65,
+          "medianMs": 24.886271
+        },
+        "tgreedy": {
+          "mean": 1.0003525252253371,
+          "worst": 1.0010172939979654,
+          "optimal": 0.65,
+          "medianMs": 24.404229
+        },
+        "twoApprox": {
+          "mean": 1.0067524225162297,
+          "worst": 1.0281124497991967,
+          "optimal": 0.65,
+          "medianMs": 21.232458
+        }
+      }
+    },
+    {
+      "family": "genome reads, n=1,000, 2,000 bp",
+      "instances": 20,
+      "fallbacks": 0,
+      "results": {
+        "naive": {
+          "mean": 15.742012864083312,
+          "worst": 16,
+          "optimal": 0,
+          "medianMs": 2.160854
+        },
+        "greedy": {
+          "mean": 1.000150388811337,
+          "worst": 1.0010025062656642,
+          "optimal": 0.75,
+          "medianMs": 270.5468125
+        },
+        "mgreedy": {
+          "mean": 1.000150388811337,
+          "worst": 1.0010025062656642,
+          "optimal": 0.75,
+          "medianMs": 278.164021
+        },
+        "tgreedy": {
+          "mean": 1.000150388811337,
+          "worst": 1.0010025062656642,
+          "optimal": 0.75,
+          "medianMs": 274.978167
+        },
+        "twoApprox": {
+          "mean": 1.004787393954509,
+          "worst": 1.0195979899497487,
+          "optimal": 0.75,
+          "medianMs": 85.857354
+        }
+      }
+    },
+    {
+      "family": "periodic, n=60",
+      "instances": 20,
+      "fallbacks": 0,
+      "results": {
+        "naive": {
+          "mean": 2.0024783259153867,
+          "worst": 3.075268817204301,
+          "optimal": 0,
+          "medianMs": 0.0602295
+        },
+        "greedy": {
+          "mean": 1.0076744900194101,
+          "worst": 1.043010752688172,
+          "optimal": 0.5,
+          "medianMs": 0.127021
+        },
+        "mgreedy": {
+          "mean": 1.168248857321172,
+          "worst": 1.5591397849462365,
+          "optimal": 0.1,
+          "medianMs": 0.125688
+        },
+        "tgreedy": {
+          "mean": 1.0756858451466234,
+          "worst": 1.3978494623655915,
+          "optimal": 0.15,
+          "medianMs": 0.1237705
+        },
+        "twoApprox": {
+          "mean": 1.0320308344285478,
+          "worst": 1.2181818181818183,
+          "optimal": 0.5,
+          "medianMs": 16.2969995
+        }
+      }
+    }
+  ]
+}

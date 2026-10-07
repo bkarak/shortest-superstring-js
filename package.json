@@ -1,0 +1,21 @@
+{
+  "name": "shortest-superstring-js",
+  "version": "1.0.0",
+  "private": true,
+  "description": "A polynomial-time 2-approximation for shortest common superstring, with Greedy, MGREEDY, TGREEDY, an exact solver and a benchmark harness",
+  "main": "src/index.js",
+  "license": "MIT",
+  "author": "Vassilios Karakoidas",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bkarak/shortest-superstring-js.git"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "test": "node --test test/",
+    "bench": "node bench/run.js",
+    "bench:quick": "node bench/run.js --quick"
+  }
+}
